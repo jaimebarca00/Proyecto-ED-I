@@ -1,0 +1,85 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Cont_Peatonal_NP is port (
+	--Input Ports
+		clk: in std_logic; --Clk de 1 seg
+	--Output Ports
+		Q_P: out std_logic_vector(4 downto 0);
+		Num_P: out integer);
+end Cont_Peatonal_NP;
+
+
+architecture Cuenta_P of Cont_Peatonal_NP is
+	
+	signal Q_int : std_logic_vector(4 downto 0) := "11000";
+	signal numero : integer range 0 to 25 := 25;
+	
+	begin
+	
+	process (clk) begin
+
+		if rising_edge(clk)then	
+					
+				Q_int <= Q_int - 1;
+				numero <= numero - 1; --El numero esta atrasado 1 con respecto al contador.
+				
+				if numero = 1 then
+				Q_int <= "11000";
+				numero <= 24;
+				end if;
+				
+		end if;
+	end process;
+	
+	Q_P <= Q_int;
+	Num_P <= numero;
+	
+end Cuenta_P;
+
+
+
+--	--Input Ports
+--		Paso , clk: in std_logic; --Clk de 1 seg
+--		--Paso = 0 Si los peatones no pueden pasar, Paso = 1 si los peatones pueden pasar.
+--	--Output Ports
+--		Q_P: out std_logic_vector(4 downto 0);
+--		Num_P: out integer);
+
+--
+--	signal Q_int : std_logic_vector(4 downto 0) := "11000";
+--	signal numero : integer range 0 to 25 := 24;
+--	signal cambio : std_logic := '0';
+--	
+--	begin
+--	
+--	process (clk,Paso) begin
+--
+--		if rising_edge(clk)then	
+--			if Paso = '0' then
+--						
+--				Q_int <= Q_int - 1;
+--				numero <= numero - 1;
+--									
+--			elsif Paso = '1' then
+--		
+--				if cambio = '0' then
+--						Q_int <= Q_int - 14;
+--						numero <= numero - 14;
+--						cambio <= not cambio;
+--				else
+--					Q_int <= Q_int - 1;
+--					numero <= numero - 1;
+--					if numero = 0 then
+--					cambio <= not cambio;
+--					end if;
+--					
+--				end if;
+--			end if;
+--		end if;
+--	end process ;
+--	
+--	Q_P <= Q_int;
+--	Num_P <= numero;

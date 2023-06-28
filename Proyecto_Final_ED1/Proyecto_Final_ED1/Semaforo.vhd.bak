@@ -1,0 +1,96 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+
+entity Semaforo is
+
+  port(
+		-- Input ports
+		U,Clock, vel : in std_logic;         
+		-- Output ports  
+		Displays : out  std_logic_vector (3 downto 0); 
+      Segmentos : out  std_logic_vector (6 downto 0)
+		 );	
+		 
+end Semaforo;
+
+
+architecture Sem of Semaforo is
+
+component div_frec
+
+	port(
+		-- Input ports
+		clk: in  std_logic;
+		Nciclos: in	integer;			
+		
+		-- Output ports
+		f: out std_logic);
+
+end component;
+
+
+
+
+
+component Maquina_Estados
+
+	port(
+		-- Input ports
+			U,vel,clk	: in  std_logic;
+		-- Output ports
+			Q :	out std_logic_vector (2 downto 0));
+
+end component;
+
+component Memoria
+
+	port(
+		-- Input ports
+			D :	in std_logic_vector (2 downto 0);
+			clk : in std_logic ; 
+		-- Output ports
+			NumBCD :	out std_logic_vector (11 downto 0));
+
+end component;
+
+component Selector_7Seg
+
+		port ( 
+		-- Input ports
+			Reloj: in std_logic;
+			num_BCD: in std_logic_vector (11 downto 0);
+		-- Output ports	
+			Displays : out  std_logic_vector (3 downto 0);
+         Segmentos : out  std_logic_vector (6 downto 0)
+			);
+
+end component;
+
+
+
+
+signal Freq_deseada : integer := 25000000; -- 50M / 2*1hz Periodo 1seg FPGA
+--signal Freq_deseada : integer := 1000; --  2k / 2hz = 1000 Periodo 1 seg Simulación
+
+
+
+signal Nuevo_Reloj : std_logic;
+signal BCD : std_logic_vector (11 downto 0) := "000000000000";
+signal Q_cuenta : std_logic_vector (2 downto 0);
+
+begin
+
+
+DivisorFrec :div_frec port map(Clock,Freq_deseada,Nuevo_Reloj);
+
+MaquinaEstados : Maquina_Estados port map(U,vel,Nuevo_Reloj,Q_cuenta);
+
+Memo : Memoria port map(Q_cuenta,Nuevo_Reloj,BCD);
+
+Selector :Selector_7Seg port map(Clock,BCD,Displays,Segmentos); 
+  
+
+end Sem;

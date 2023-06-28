@@ -1,0 +1,56 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Control_Sensores is port ( --Cuenta de espera del paso peatonal
+	--Input Ports
+		
+		clk: in std_logic; --Clk de 1 seg
+		cambio: in natural range 0 to 2;
+	--Output Ports
+		S_C: out std_logic;
+		Num_NP: out natural);
+end Control_Sensores;
+
+
+architecture Control of Control_Sensores is
+	
+	signal Q_intNP : std_logic_vector(4 downto 0) := "10110";
+	signal numeroNP : natural range 0 to 23:= 23;
+	
+	begin
+	
+	
+	
+	process (clk,cambio) begin
+
+	
+	if (cambio = 1 or cambio = 2) then
+	
+			if rising_edge(clk)then	
+					
+				Q_intNP <= Q_intNP - 1;
+				numeroNP <= numeroNP - 1; --El numeroNP esta atrasado 1 con respecto al contador.
+				
+				if numeroNP = 1 then
+				Q_intNP <= "10110";
+				numeroNP <= 23;
+				end if;
+				
+		end if;
+
+	
+	else
+	
+		Q_intNP <= "10110";
+		numeroNP <= 23;
+	
+	end if;
+	end process;
+	
+	Q_NP <= Q_intNP;
+	Num_NP <= numeroNP;
+	
+end Control;
+

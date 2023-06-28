@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Cont_Peatonal is port (
+	--Input Ports
+		clk: in std_logic;
+	--Output Ports
+		Q: out std_logic_vector(2 downto 0);
+		Num: out integer);
+end Cont_Peatonal;
+
+
+architecture Cuenta_P of Cont_Peatonal is
+	
+	signal Q_int : std_logic_vector(2 downto 0);
+	signal numero : integer range 0 to 5;
+	
+	begin
+	process (clk) begin
+	
+		if rising_edge(clk)then
+		
+			if Q_int = "101" then
+				Q_int <= "000";
+				numero <= 0;
+			else
+				Q_int <= Q_int + 1;
+				numero <= numero + 1;
+			end if;
+			
+		end if ;
+	end process ;
+	
+	Q <= Q_int;
+	Num <= numero;
+	
+end Cuenta_P;

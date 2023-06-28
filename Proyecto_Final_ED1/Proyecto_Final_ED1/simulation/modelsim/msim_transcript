@@ -1,0 +1,51 @@
+# Reading pref.tcl
+# do Semaforo_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/20.1/Proyectos_U/Proyecto_Final_ED1/Selector_7Seg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:46:01 on Jul 02,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/20.1/Proyectos_U/Proyecto_Final_ED1/Selector_7Seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Selector_7Seg
+# -- Compiling architecture Seleccionar of Selector_7Seg
+# End time: 18:46:01 on Jul 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/20.1/Proyectos_U/Proyecto_Final_ED1/BCD_a_7seg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:46:02 on Jul 02,2022
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/20.1/Proyectos_U/Proyecto_Final_ED1/BCD_a_7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity BCD_a_7seg
+# -- Compiling architecture Behavioralbcd of BCD_a_7seg
+# End time: 18:46:02 on Jul 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.selector_7seg
+# vsim work.selector_7seg 
+# Start time: 18:46:07 on Jul 02,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.selector_7seg(seleccionar)
+# Loading work.bcd_a_7seg(behavioralbcd)
+# End time: 18:46:21 on Jul 02,2022, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0

@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Leds_Semaforos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Leds_Semaforos[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Displays[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Displays[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Segmentos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Sensores_In[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sensores_In[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sensores_In[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sensores_In[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BotonPaso",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

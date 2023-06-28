@@ -1,0 +1,161 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -4.471
+TNS   : -119.399
+
+Type  : Slow 1200mV 85C Model Setup 'div_frec:Reloj1Seg|salida'
+Slack : -1.611
+TNS   : -36.759
+
+Type  : Slow 1200mV 85C Model Setup 'BotonPaso'
+Slack : 0.114
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'div_frec:Reloj1Seg|salida'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'BotonPaso'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'div_frec:Reloj1Seg|salida'
+Slack : -1.952
+TNS   : -57.661
+
+Type  : Slow 1200mV 85C Model Recovery 'BotonPaso'
+Slack : -1.603
+TNS   : -1.603
+
+Type  : Slow 1200mV 85C Model Removal 'div_frec:Reloj1Seg|salida'
+Slack : 1.468
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'BotonPaso'
+Slack : 1.915
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -72.889
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BotonPaso'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div_frec:Reloj1Seg|salida'
+Slack : -1.487
+TNS   : -59.480
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -4.231
+TNS   : -106.009
+
+Type  : Slow 1200mV 0C Model Setup 'div_frec:Reloj1Seg|salida'
+Slack : -1.356
+TNS   : -30.180
+
+Type  : Slow 1200mV 0C Model Setup 'BotonPaso'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'div_frec:Reloj1Seg|salida'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'BotonPaso'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'div_frec:Reloj1Seg|salida'
+Slack : -1.717
+TNS   : -50.370
+
+Type  : Slow 1200mV 0C Model Recovery 'BotonPaso'
+Slack : -1.505
+TNS   : -1.505
+
+Type  : Slow 1200mV 0C Model Removal 'div_frec:Reloj1Seg|salida'
+Slack : 1.328
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'BotonPaso'
+Slack : 1.923
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -72.889
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BotonPaso'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_frec:Reloj1Seg|salida'
+Slack : -1.487
+TNS   : -59.855
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -1.383
+TNS   : -24.805
+
+Type  : Fast 1200mV 0C Model Setup 'div_frec:Reloj1Seg|salida'
+Slack : -0.887
+TNS   : -5.599
+
+Type  : Fast 1200mV 0C Model Setup 'BotonPaso'
+Slack : 0.624
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div_frec:Reloj1Seg|salida'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'BotonPaso'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'div_frec:Reloj1Seg|salida'
+Slack : -0.309
+TNS   : -6.757
+
+Type  : Fast 1200mV 0C Model Recovery 'BotonPaso'
+Slack : 0.054
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'BotonPaso'
+Slack : 0.567
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'div_frec:Reloj1Seg|salida'
+Slack : 0.628
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -53.872
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BotonPaso'
+Slack : -3.000
+TNS   : -4.223
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div_frec:Reloj1Seg|salida'
+Slack : -1.000
+TNS   : -40.000
+
+------------------------------------------------------------

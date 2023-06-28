@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use work.std_arith.all;
+
+entity contador is port (
+	--Input Ports
+		clk: in std_logic;
+		UP:in std_logic;
+	--Output Ports
+		Q: out std_logic_vector(2 downto 0));
+end contador;
+
+
+architecture a_contador of contador is
+	
+	signal Q_int : std_logic_vector(2 downto 0));
+	
+	begin
+	process (UP, clk) begin
+	
+		if rising_edge(clk)then
+		
+			if Q_int = "101" then
+				Q_int <= "000";
+			else
+				if (UP = '0') then
+				Q_int <= Q_int+1;
+				else
+				Q_int <= Q_int-1;
+				end if ;
+			end if;
+		end if ;
+	end process ;
+	
+	Q <= Q_int;
+	
+end a_contador;

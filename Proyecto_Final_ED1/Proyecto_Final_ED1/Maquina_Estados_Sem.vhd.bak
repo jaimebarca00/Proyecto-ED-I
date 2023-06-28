@@ -1,0 +1,25 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Maquina_Estados_Sem is 
+
+	port(
+		-- Input ports
+			U,vel,clk	: in  std_logic;
+		-- Output ports
+			Q :	out std_logic_vector (2 downto 0));
+
+end Maquina_Estados_Sem;
+
+architecture maq_est of Maquina_Estados is
+	
+	signal Q_cuenta : std_logic_vector (2 downto 0);
+	signal D0,D1,D2 : std_logic;
+	
+begin
+
+end maq_est;
+	

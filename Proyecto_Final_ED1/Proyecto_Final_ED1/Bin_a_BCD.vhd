@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Bin_a_BCD is
+	generic(
+		N_Bits  : integer :=  5; -- Cantidad de bits del numero binario.
+		NB_Salida: integer := 8  -- Cantidad de bits de salida en formato BCD.
+	);
+	port(
+		num_bin: in  std_logic_vector(N_Bits-1   downto 0);
+		num_BCD: out std_logic_vector(NB_Salida-1 downto 0)
+	);
+end Bin_a_BCD;
+
+architecture Convertir of Bin_a_BCD is
+
+begin
+
+	process(num_bin)
+		variable z: std_logic_vector(N_Bits+NB_Salida-1 downto 0); 
+	begin
+		-- Inicializacion de datos en cero.
+		z := (others => '0');
+		
+		-- Se realizan los primeros tres corrimientos.
+		z(N_Bits+2 downto 3) := num_bin;
+		
+		-- Ciclo para las iteraciones restantes.
+		
+		for i in 0 to N_Bits-4 loop -- #Iteraciones = #Bits Binario
+		
+			-- Unidades (4 bits).
+			if z(N_Bits+3 downto N_Bits) > 4 then
+				z(N_Bits+3 downto N_Bits) := z(N_Bits+3 downto N_Bits) + 3;
+			end if;
+			
+			-- Decenas (4 bits).
+			if z(N_Bits+7 downto N_Bits+4) > 4 then
+				z(N_Bits+7 downto N_Bits+4) := z(N_Bits+7 downto N_Bits+4) + 3;
+			end if;
+			
+			-- Corrimiento a la izquierda.
+			z(N_Bits+NB_Salida-1 downto 1) := z(N_Bits+NB_Salida-2 downto 0);
+			
+		end loop;
+		
+		-- Pasando datos de variable Z, correspondiente a BCD.
+		num_BCD <= z(N_Bits+NB_Salida-1 downto N_Bits);
+		
+	end process;
+end Convertir;
