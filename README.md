@@ -14,6 +14,7 @@
 - [Dispositivos](#Dispositivos)
 - [Diagrama de flujo](#Diagrama-de-flujo)
 - [Máquina de estados](#Máquina-de-estados)
+- [Simulación máquina de estados](#Simulación-máquina-de-estados)
 - [Referencias](#Referencias)
 
 ## Descripción
@@ -146,6 +147,10 @@ Diodos emisores de luz de material semiconductor que posee dos terminales. Puede
 ![13](https://github.com/jaimebarca00/Proyecto-ED-I/assets/127891811/6223a732-2dd5-46d9-ba57-c4982392982a)
 
 ![14](https://github.com/jaimebarca00/Proyecto-ED-I/assets/127891811/ff3eb918-30a6-4a90-8825-101209efb54f)
+
+## Simulación máquina de estados
+![image](https://github.com/jaimebarca00/Proyecto-ED-I/assets/127891811/5eb69931-be7d-4108-a079-53ecbed40f40)
+Como se observa, se hizo la prueba para diferentes estados presentados en la tabla, y el funcionamiento es totalmente correcto, haciendo los cambios de estado esperados.
 
 
 
